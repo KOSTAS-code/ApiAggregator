@@ -62,7 +62,7 @@ ApiAggregator.Tests/
     ```bash
     https://localhost:<port>/swagger
 
-    Use Swagger UI to test the endpoint:
+Use Swagger UI to test the endpoint:
     ```bash
     GET /api/aggregate
 
