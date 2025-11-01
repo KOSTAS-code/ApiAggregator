@@ -56,7 +56,7 @@ ApiAggregator.Tests/
    git clone https://github.com/kostas-code/ApiAggregator.git
 
 ```markdown
-2. Open the solution in Visual Studio 2022, or run from CLI:
+2. Open the solution in Visual Studio 2022:
    ```bash
    cd ApiAggregator
    dotnet run
