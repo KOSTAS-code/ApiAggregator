@@ -101,9 +101,8 @@ bash
 Total tests: 2
 Passed: 2
 Failed: 0
-  
-## 👤 Author
-**Kostas Vesdekis**  
-Junior .NET Developer | Backend Enthusiast  
-📧 konstantinosbesdekes@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/konstantinos-vesdekis-32b9082a7)
+👤 Author
+Kostas Vesdekis
+Junior .NET Developer | Backend Enthusiast
+📧 konstantinosbesdekes@gmail.com
+🔗 LinkedIn
