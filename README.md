@@ -66,3 +66,28 @@ Use Swagger UI to test the endpoint:
 ```bash
 GET /api/aggregate
 
+---
+
+## ✅ Example Response
+
+```json
+{
+  "weather": {
+    "source": "Weather",
+    "city": "Athens",
+    "tempCelsius": 22,
+    "condition": "Clear"
+  },
+  "news": {
+    "source": "News",
+    "headlines": [
+      "Breaking story A",
+      "Breaking story B"
+    ]
+  },
+  "github": {
+    "source": "GitHub",
+    "repo": "example-repo",
+    "stars": 123
+  }
+}
