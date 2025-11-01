@@ -65,7 +65,6 @@ ApiAggregator.Tests/
 Use Swagger UI to test the endpoint:
 ```bash
 GET /api/aggregate
-
 ---
 
 ## ✅ Example Response
