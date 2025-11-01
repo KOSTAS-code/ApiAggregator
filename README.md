@@ -58,6 +58,13 @@ ApiAggregator.Tests/
     ```bash
     cd ApiAggregator
     dotnet run
+3. Open your browser at:
+    ```bash
+    https://localhost:<port>/swagger
+
+    Use Swagger UI to test the endpoint:
+    ```bash
+    GET /api/aggregate
 
 ## ✅ Example Response
 
