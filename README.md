@@ -63,50 +63,6 @@ ApiAggregator.Tests/
     https://localhost:<port>/swagger
 
 Use Swagger UI to test the endpoint:
-        ```bash
-    GET /api/aggregate
+```bash
+GET /api/aggregate
 
-## ✅ Example Response
-
-```json
-{
-  "weather": {
-    "source": "Weather",
-    "city": "Athens",
-    "tempCelsius": 22,
-    "condition": "Clear"
-  },
-  "news": {
-    "source": "News",
-    "headlines": [
-      "Breaking story A",
-      "Breaking story B"
-    ]
-  },
-  "github": {
-    "source": "GitHub",
-    "repo": "example-repo",
-    "stars": 123
-  }
-}
-
-🧪 Tests
-
-Run tests using Visual Studio’s Test Explorer:
-
-dotnet test
-
-
-Expected output:
-
-Total tests: 2
-Passed: 2
-Failed: 0
-
----
-  
-## 👤 Author
-**Kostas Vesdekis**  
-Junior .NET Developer | Backend Enthusiast  
-📧 konstantinosbesdekes@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/konstantinos-vesdekis-32b9082a7)
