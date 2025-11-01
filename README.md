@@ -63,8 +63,8 @@ ApiAggregator.Tests/
     https://localhost:<port>/swagger
 
 Use Swagger UI to test the endpoint:
-```bash
-GET /api/aggregate
+        ```bash
+        GET /api/aggregate
 
 ## ✅ Example Response
 
