@@ -65,10 +65,9 @@ ApiAggregator.Tests/
 Use Swagger UI to test the endpoint:
 ```bash
 GET /api/aggregate
-
-## ✅ Example Response
-
-```json
+✅ Example Response
+json
+Αντιγραφή κώδικα
 {
   "weather": {
     "source": "Weather",
@@ -89,21 +88,19 @@ GET /api/aggregate
     "stars": 123
   }
 }
-
 🧪 Tests
+Run tests using Visual Studio’s Test Explorer or via CLI:
 
-Run tests using Visual Studio’s Test Explorer:
-
+bash
+Αντιγραφή κώδικα
 dotnet test
-
-
 Expected output:
 
+bash
+Αντιγραφή κώδικα
 Total tests: 2
 Passed: 2
 Failed: 0
-
----
   
 ## 👤 Author
 **Kostas Vesdekis**  
