@@ -55,10 +55,11 @@ ApiAggregator.Tests/
    ```bash
    git clone https://github.com/kostas-code/ApiAggregator.git
 
-2. Open the solution in Visual Studio 2022:
-
-    cd ApiAggregator
-    dotnet run
+```markdown
+2. Open the solution in Visual Studio 2022, or run from CLI:
+   ```bash
+   cd ApiAggregator
+   dotnet run
 
 
 3. Open your browser at:
@@ -70,7 +71,9 @@ Use Swagger UI to test the endpoint:
 
     GET /api/aggregate
 
-✅ Example Response
+## ✅ Example Response
+
+```json
 {
   "weather": {
     "source": "Weather",
