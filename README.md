@@ -57,18 +57,18 @@ ApiAggregator.Tests/
 
 2. Open the solution in Visual Studio 2022:
 
-cd ApiAggregator
-dotnet run
+    cd ApiAggregator
+    dotnet run
 
 
 3. Open your browser at:
 
-https://localhost:<port>/swagger
+    https://localhost:<port>/swagger
 
 
 Use Swagger UI to test the endpoint:
 
-GET /api/aggregate
+    GET /api/aggregate
 
 ✅ Example Response
 {
@@ -94,16 +94,16 @@ GET /api/aggregate
 
 4. 🧪 Tests
 
-Run tests using Visual Studio’s Test Explorer or via CLI:
+    Run tests using Visual Studio’s Test Explorer:
 
-dotnet test
+        dotnet test
 
 
-Expected output:
+    Expected output:
 
-Total tests: 2
-Passed: 2
-Failed: 0
+       Total tests: 2
+       Passed: 2
+       Failed: 0
 
 ---
   
