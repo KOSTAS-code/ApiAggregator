@@ -1,37 +1,18 @@
-﻿using System.Threading.Tasks;
+﻿using ApiAggregator.Models;
 
 namespace ApiAggregator.Services
 {
     public class NewsService
     {
-        // This method simulates getting top news from an external API
-        public async Task<object> GetNewsAsync()
+        public async Task<NewsResponse> GetNewsAsync()
         {
-            try
-            {
-                // Simulate async API call delay
-                await Task.Delay(300);
+            await Task.Delay(50);
 
-                // Return some example headlines
-                return new
-                {
-                    source = "News",
-                    headlines = new string[]
-                    {
-                        "Story A",
-                        "Story B"
-                    }
-                };
-            }
-            catch
+            return new NewsResponse
             {
-                // Fallback response in case of error
-                return new
-                {
-                    source = "News",
-                    error = "Could not retrieve news data"
-                };
-            }
+                source = "News",
+                headlines = new List<string> { "Story A", "Story B" }
+            };
         }
     }
 }

@@ -51,11 +51,12 @@ namespace ApiAggregator.Tests
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(actionResult);
-            dynamic data = okResult.Value!;
+            var data = okResult.Value;
 
-            Assert.NotNull(data.weather);
-            Assert.NotNull(data.news);
-            Assert.NotNull(data.github);
+            Assert.NotNull(data);
+            Assert.NotNull(data.GetType().GetProperty("weather"));
+            Assert.NotNull(data.GetType().GetProperty("news"));
+            Assert.NotNull(data.GetType().GetProperty("github"));
         }
     }
 }

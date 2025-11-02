@@ -1,34 +1,19 @@
-﻿using System.Threading.Tasks;
+﻿using ApiAggregator.Models;
 
 namespace ApiAggregator.Services
 {
     public class GithubService
     {
-        // This method simulates getting repository info from GitHub API
-        public async Task<object> GetGithubAsync()
+        public async Task<GithubResponse> GetGithubAsync()
         {
-            try
-            {
-                // Simulate async API call delay
-                await Task.Delay(300);
+            await Task.Delay(50);
 
-                // Return a fake repository object
-                return new
-                {
-                    source = "GitHub",
-                    repo = "ApiAggregator-Example",
-                    stars = 123
-                };
-            }
-            catch
+            return new GithubResponse
             {
-                // Simple fallback if API call fails
-                return new
-                {
-                    source = "GitHub",
-                    error = "Could not retrieve GitHub data"
-                };
-            }
+                source = "GitHub",
+                repo = "ApiAggregator-Example",
+                stars = 123
+            };
         }
     }
 }
