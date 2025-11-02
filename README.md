@@ -7,11 +7,11 @@ and returns a unified JSON response through a single endpoint.
 
 ## 🚀 Features
 
-- **Parallel API Calls** – Executes multiple external API calls concurrently using `Task.WhenAll()`.
+- **Parallel API Calls** – Fetches data from multiple sources concurrently using Task.WhenAll().
 - **Error Handling & Fallback** – Ensures the API remains operational even if one source fails.
-- **Filtering** – Query parameters allow inclusion/exclusion of specific data sources (Weather, News, GitHub).
-- **Swagger Integration** – Auto-generated API documentation with interactive testing.
-- **Unit Tests (xUnit)** – Verifies core functionality and filtering logic.
+- **Filtering** – Optional query parameters allow selective inclusion of Weather, News, or GitHub data.
+- **Swagger Integration** – Auto-generated API documentation with built-in testing support.
+- **Unit Tests (xUnit)** – Simple, focused tests ensuring each service and the controller work correctly.
 
 ---
 
@@ -107,3 +107,8 @@ dotnet test
 Junior .NET Developer | Backend Enthusiast  
 📧 konstantinosbesdekes@gmail.com  
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/konstantinos-vesdekis-32b9082a7)
+
+---
+
+## ✅ Test Results
+All unit tests were executed successfully using Visual Studio 2022 Test Explorer.
