@@ -89,3 +89,11 @@ GET /api/aggregate
     "stars": 123
   }
 }
+---
+
+## 🧪 Tests
+
+Run tests using Visual Studio’s **Test Explorer** or via CLI:
+
+```bash
+dotnet test
