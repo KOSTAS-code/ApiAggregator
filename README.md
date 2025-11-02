@@ -94,7 +94,7 @@ GET /api/aggregate
 
 ## 🧪 Tests
 
-Run tests using Visual Studio’s **Test Explorer** or via CLI:
+Run tests using Visual Studio’s **Test Explorer**:
 
 ```bash
 dotnet test
