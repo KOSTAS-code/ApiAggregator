@@ -21,21 +21,19 @@ ApiAggregator/
 ├── Controllers/
 │ └── AggregateController.cs
 ├── Services/
-│ ├── IExternalApiService.cs
 │ ├── WeatherService.cs
 │ ├── NewsService.cs
 │ └── GithubService.cs
 ├── Models/
+│ ├── WeatherResponse.cs
+│ ├── NewsResponse.cs
+│ ├── GithubResponse.cs
 │ └── AggregatedResponse.cs
 ├── Program.cs
 ├── appsettings.json
 └── ApiAggregator.http
 
 ApiAggregator.Tests/
-├── Fakes/
-│ ├── FakeWeatherService.cs
-│ ├── FakeNewsService.cs
-│ └── FakeGithubService.cs
 └── UnitTest1.cs
 
 ---
