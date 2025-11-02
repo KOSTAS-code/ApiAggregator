@@ -99,3 +99,11 @@ Run tests using Visual Studio’s **Test Explorer**:
 ```bash
 dotnet test
 ```
+---
+
+## 👨‍💻 Author
+
+**Konstantinos Vesdekis**  
+Junior .NET Developer | Backend Enthusiast  
+📧 konstantinosbesdekes@gmail.com  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/konstantinos-vesdekis-32b9082a7)
