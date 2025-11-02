@@ -14,7 +14,7 @@ and returns a unified JSON response through a single endpoint.
 - **Unit Tests (xUnit)** – Simple, focused tests ensuring each service and the controller work correctly.
 
 ---
-
+```
 ## 🧠 Project Structure
 
 ApiAggregator/
@@ -35,7 +35,7 @@ ApiAggregator/
 
 ApiAggregator.Tests/
 └── UnitTest1.cs
-
+```
 ---
 
 ## 🧩 Technologies Used
