@@ -1,34 +1,32 @@
-
 using ApiAggregator.Services;
 
-namespace ApiAggregator
+var builder = WebApplication.CreateBuilder(args);
+
+// Add controllers
+builder.Services.AddControllers();
+
+// Register our custom services
+// These are simple classes, so Singleton works fine for now
+builder.Services.AddSingleton<WeatherService>();
+builder.Services.AddSingleton<NewsService>();
+builder.Services.AddSingleton<GithubService>();
+
+// Add Swagger for testing and documentation
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Enable Swagger only in Development mode
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
-            
-            // Add services to the controllers.
-            builder.Services.AddControllers();
-
-            // Swagger services
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            // Register services
-          // builder.Services.AddScoped<IExternalApiService, WeatherService>();
-            builder.Services.AddScoped<WeatherService>();
-            builder.Services.AddScoped<NewsService>();
-            builder.Services.AddScoped<GithubService>();
-
-            var app = builder.Build();
-
-            app.UseSwagger();
-            app.UseSwaggerUI();
-
-            app.MapControllers();
-            app.Run();
-        }
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+// Basic middleware setup
+app.UseHttpsRedirection();
+
+app.MapControllers();
+
+app.Run();

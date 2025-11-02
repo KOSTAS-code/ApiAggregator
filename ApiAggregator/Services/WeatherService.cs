@@ -1,18 +1,35 @@
-﻿namespace ApiAggregator.Services
+﻿using System.Threading.Tasks;
+
+namespace ApiAggregator.Services
 {
-    public class WeatherService : IExternalApiService
+    public class WeatherService
     {
-        public virtual async Task<object> GetDataAsync()
+        // This method simulates fetching weather data from an external API
+        public async Task<object> GetWeatherAsync()
         {
-            // TODO: Implement API call
-            await Task.Delay(10);
-            return new 
-            {   
-                Source = "Weather",
-                City = "Athens",
-                TempCelsius = 22,
-                Condition = "Clear"
-            };
+            try
+            {
+                // Simulate async API call delay
+                await Task.Delay(300);
+
+                // Return a sample JSON object
+                return new
+                {
+                    source = "Weather",
+                    city = "Athens",
+                    tempCelsius = 22,
+                    condition = "Clear"
+                };
+            }
+            catch
+            {
+                // Simple fallback in case something goes wrong
+                return new
+                {
+                    source = "Weather",
+                    error = "Could not retrieve weather data"
+                };
+            }
         }
     }
 }

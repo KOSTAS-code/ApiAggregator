@@ -1,61 +1,61 @@
-using System.Threading.Tasks;
-using ApiAggregator.Controllers;
-using ApiAggregator.Models;
-using ApiAggregator.Tests.Fakes;
-using Microsoft.AspNetCore.Mvc;
 using Xunit;
+using ApiAggregator.Services;
+using ApiAggregator.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace ApiAggregator.Tests
 {
-    public class AggregateControllerTests
+    public class UnitTest1
     {
         [Fact]
-        public async Task Get_ReturnsAggregatedResponse_WithAllSources()
+        public async Task WeatherService_Should_Return_Correct_Data()
         {
             // Arrange
-            var controller = new AggregateController(
-                new FakeWeatherService(),
-                new FakeNewsService(),
-                new FakeGithubService()
-            );
+            var service = new WeatherService();
 
             // Act
-            var result = await controller.Get(
-                includeWeather: true,
-                includeNews: true,
-                includeGithub: true
-            );
+            var result = await service.GetWeatherAsync();
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var response = Assert.IsType<AggregatedResponse>(okResult.Value);
-
-            Assert.NotNull(response.Weather);
-            Assert.NotNull(response.News);
-            Assert.NotNull(response.Github);
+            Assert.Equal("Weather", result.source);
+            Assert.Equal("Athens", result.city);
         }
 
         [Fact]
-        public async Task Get_CanExclude_Github_Service()
+        public async Task NewsService_Should_Return_Headlines()
         {
-            var controller = new AggregateController(
-                new FakeWeatherService(),
-                new FakeNewsService(),
-                new FakeGithubService()
-            );
+            // Arrange
+            var service = new NewsService();
 
-            var result = await controller.Get(
-                includeWeather: true,
-                includeNews: true,
-                includeGithub: false
-            );
+            // Act
+            var result = await service.GetNewsAsync();
 
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var response = Assert.IsType<AggregatedResponse>(okResult.Value);
+            // Assert
+            Assert.Equal("News", result.source);
+            Assert.NotEmpty(result.headlines);
+        }
 
-            Assert.NotNull(response.Weather);
-            Assert.NotNull(response.News);
-            Assert.Null(response.Github);
+        [Fact]
+        public async Task Controller_Should_Aggregate_All_Sources()
+        {
+            // Arrange
+            var weather = new WeatherService();
+            var news = new NewsService();
+            var github = new GithubService();
+
+            var controller = new AggregateController(weather, news, github);
+
+            // Act
+            var actionResult = await controller.GetAggregate(true, true, true);
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(actionResult);
+            dynamic data = okResult.Value!;
+
+            Assert.NotNull(data.weather);
+            Assert.NotNull(data.news);
+            Assert.NotNull(data.github);
         }
     }
 }
