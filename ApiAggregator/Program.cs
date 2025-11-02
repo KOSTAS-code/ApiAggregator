@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Register our custom services
-// These are simple classes, so Singleton works fine for now
 builder.Services.AddSingleton<WeatherService>();
 builder.Services.AddSingleton<NewsService>();
 builder.Services.AddSingleton<GithubService>();
