@@ -77,13 +77,13 @@ GET /api/aggregate
   "news": {
     "source": "News",
     "headlines": [
-      "Breaking story A",
-      "Breaking story B"
+      "Story A",
+      "Story B"
     ]
   },
   "github": {
     "source": "GitHub",
-    "repo": "example-repo",
+    "repo": "ApiAggregator-Example",
     "stars": 123
   }
 }
