@@ -25,9 +25,6 @@ ApiAggregator/
 │ ├── NewsService.cs
 │ └── GithubService.cs
 ├── Models/
-│ ├── WeatherResponse.cs
-│ ├── NewsResponse.cs
-│ ├── GithubResponse.cs
 │ └── AggregatedResponse.cs
 ├── Program.cs
 ├── appsettings.json
